@@ -5,7 +5,7 @@ var mouseEvent = "empty";
     ctx = canvas.getContext("2d");
     
     color = "red";
-ctx.fillRect(10,10,400,400);
+ctx.fillRect(10,10,400,600);
     width_of_line = 2;
     canvas.addEventListener("mousedown", my_mousedown);
     
@@ -15,7 +15,7 @@ ctx.fillRect(10,10,400,400);
         color = document.getElementById("color").value;
         width_of_line = document.getElementById("width_of_line").value;
         radius = document.getElementById("radius").value;
-        mouseEvent = "mouseDown";
+        mouseEvent = "mousedown";
     }
 
     canvas.addEventListener("mousemove", my_mousemove);
@@ -24,7 +24,7 @@ ctx.fillRect(10,10,400,400);
         current_position_of_mouse_x = e.clientX - canvas.offsetLeft;
         current_position_of_mouse_y = e.clientY - canvas.offsetTop;
 
-        if (mouseEvent == "mouseDown") {
+        if (mouseEvent == "mousedown") {
         console.log("Current position of x and y coordinates = ");
         console.log("x  = " + current_position_of_mouse_x + "y = " + current_position_of_mouse_y);
         ctx.beginPath();
